@@ -1,0 +1,17 @@
+.imag{
+    position:absolute;
+    right:100px;
+    width:100%;
+    height:90%;
+    max-width:330px;
+    border-radius: 45%;
+}
+
+@media only screen and (max-width: 800px) {
+    .imag{
+        right:30%;
+        max-width:210px;
+        height:120%;
+        
+    }
+  }
