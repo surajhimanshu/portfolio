@@ -104,7 +104,7 @@ const arr = [
 const Contact = () => {
   return (
     <ContactContainer id="contact">
-      <ContactTitle>Get In Touch</ContactTitle>
+      <ContactTitle>Contact me</ContactTitle>
       <TouchContent>
         {arr.map((item) => (
           <ContactCard>

@@ -7,6 +7,7 @@ import Contact from './Components/Contact/Contact';
 import Top from './Components/Top';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -15,9 +16,8 @@ function App() {
       <About />
       <Top />
       <Contact />
-      
-     <div></div>
-
+    
+     {/* <div></div> */}
 
     </div>
   );

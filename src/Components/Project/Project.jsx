@@ -10,6 +10,7 @@ const project = [
     github: "https://github.com/surajhimanshu/Chirp",
     demo: "https://twitter-clone-masai.herokuapp.com",
     description: "Twitter is a microblogging and social networking service",
+    tech:"REACT  |  REDUX  |  CSS  |  JAVASCRIPT "
   },
   {
     img: travelixsrc,
@@ -17,6 +18,7 @@ const project = [
     github: "https://github.com/surajhimanshu/Travelix-Clone",
     demo: "https://amanullah21.github.io/Travelix-Clone/",
     description: "A website where we can book cheapest flight tickets ",
+    tech:"HTML  |  CSS | JAVASCRIPT"
   },
 ];
 
@@ -120,30 +122,41 @@ const ProjectDescription = styled.div`
   @media only screen and (max-width: 800px) {
     font-size: 16px;
   }
-  + div {
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
-    // border:1px solid green;
-    margin-left: 10px;
+
+  +div {
+    margin: 0 0 15px 8px;
+    font-size:1.2em;
     @media only screen and (max-width: 800px) {
-      width: 80%;
+      font-size: 0.99em;
     }
-    a {
-      padding: 6px;
-      font-size: 25px;
-      letter-spacing: 1px;
-      border: 1px solid white;
-      border-radius: 5px;
-      transition: background-color 0.35s ease-in-out;
-      @media only screen and (max-width: 800px) {
-        font-size: 18px;
-      }
+  }
+  
+  }
+`;
+
+const GitDemo = styled.div`
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  //  border:1px solid green;
+  margin-left: 10px;
+  @media only screen and (max-width: 800px) {
+    width: 80%;
+  }
+  a {
+    padding: 6px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: background-color 0.35s ease-in-out;
+    @media only screen and (max-width: 800px) {
+      font-size: 18px;
     }
-    a:hover {
-      background-color: white;
-      color: var(--blueresume);
-    }
+  }
+  a:hover {
+    background-color: white;
+    color: var(--blueresume);
   }
 `;
 
@@ -160,14 +173,16 @@ const Project = () => {
             </ImageContainer>
 
             <ProjectDescription>{pro.description}</ProjectDescription>
-            <div>
+           
+            <div>{pro.tech}</div>
+            <GitDemo>
               <a rel="noreferrer" target="_blank" href={pro.demo}>
                 Demo
               </a>
               <a rel="noreferrer" target="_blank" href={pro.github}>
                 Github
               </a>
-            </div>
+            </GitDemo>
           </ProjectCard>
         ))}
       </ProjectContent>

@@ -33,8 +33,10 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <a href="#project">PROJECT</a>
-      <a href="#resume">RESUME</a>
+      <a href="#resume">ABOUT</a>
+      <a href="#skills">SKILLS</a>
       <a href="#contact">CONTACT</a>
+      
     </NavbarContainer>
   );
 };

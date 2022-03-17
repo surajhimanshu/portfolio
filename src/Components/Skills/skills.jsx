@@ -26,31 +26,31 @@ const icons = [
 ];
 
 const SkillsWrapper = styled.div`
+width:70%;
+margin:auto;
   display: flex;
   justify-content: center;
   align-items: center;
    margin-top: 50px;
   flex-wrap: wrap;
+// border:1px solid green;
+ 
+ @media only screen and (max-width: 500px) {
+    width:80%;
+   
+    //  margin-right:17%;
 
-  > div:nth-child(1) {
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  > div:nth-child(2) {
-    margin-right: 35px;
-  }
-  @media only screen and (max-width: 900px) {
-    >div:nth-child(2),>div:nth-child(1),>div{
-        margin-right:5px;
-        }
     }
+
 `;
 
 const SkillsContent = styled.div`
-  width: 24%;
+  width: 20%;
   display: grid;
   place-items: center;
   margin-bottom: 25px;
+  // border:1px solid red;
+
   img {
     width: 70px;
     height: 70px;
@@ -62,16 +62,23 @@ const SkillsContent = styled.div`
     font-size:1.4em;
   }
   @media only screen and (max-width: 900px) {
-    width: 20%;
+    width: 23%;
     img {
         width: 50px;
         height: 50px;
+        padding: 7px;
     }
     div {
-        margin-top: 10px;
+       
         font-size:1em;
       }
+    }
+  @media only screen and (max-width: 500px) {
+    width: 30%;
+    
+    }
 }
+ 
 
 `;
 
@@ -105,7 +112,7 @@ const SkillTitle = styled.div`
 
 const skills = () => {
   return (
-    <div style={{marginTop:"70px"}}>
+    <div id="skills" style={{marginTop:"70px"}}>
       <SkillTitle>Skills</SkillTitle>
       <SkillsWrapper>
         {icons.map((icon) => (
