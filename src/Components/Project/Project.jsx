@@ -10,7 +10,9 @@ const project = [
     github: "https://github.com/surajhimanshu/Chirp",
     demo: "https://twitter-clone-masai.herokuapp.com",
     description: "Twitter is a microblogging and social networking service",
-    tech:"REACT  |  REDUX  |  CSS  |  JAVASCRIPT "
+    tech: "REACT  |  REDUX  |  CSS  |  JAVASCRIPT ",
+    page: "SearchBar , Explore , Profile  & Newsletter pages",
+    functionalities: "Search User and explore section with sub-sections",
   },
   {
     img: travelixsrc,
@@ -18,7 +20,8 @@ const project = [
     github: "https://github.com/surajhimanshu/Travelix-Clone",
     demo: "https://amanullah21.github.io/Travelix-Clone/",
     description: "A website where we can book cheapest flight tickets ",
-    tech:"HTML  |  CSS | JAVASCRIPT"
+    tech: "HTML  |  CSS | JAVASCRIPT",
+    page: "Homepage & Blog pages",
   },
 ];
 
@@ -122,18 +125,32 @@ const ProjectDescription = styled.div`
   @media only screen and (max-width: 800px) {
     font-size: 16px;
   }
+}
+`;
 
-  +div {
-    margin: 0 0 15px 8px;
-    font-size:1.2em;
-    @media only screen and (max-width: 800px) {
-      font-size: 0.99em;
-    }
-  }
-  
+const ProjectStack = styled.div`
+  margin-bottom: 15px;
+  margin-left: 5px;
+  font-size: 1.2em;
+  @media only screen and (max-width: 800px) {
+    font-size: 0.99em;
   }
 `;
 
+const ProjectResponsibility = styled.div`
+  font-size: 1.2em;
+  margin-left: 5px;
+  margin-bottom:20px;
+  > div:first-child {
+    margin-bottom: 10px;
+  }
+  > div:not(:first-child) {
+    margin-bottom: 7px;
+  }
+  @media only screen and (max-width: 800px) {
+    font-size: 0.99em;
+  }
+`;
 const GitDemo = styled.div`
   display: flex;
   width: 70%;
@@ -173,8 +190,26 @@ const Project = () => {
             </ImageContainer>
 
             <ProjectDescription>{pro.description}</ProjectDescription>
-           
-            <div>{pro.tech}</div>
+            <ProjectStack>{pro.tech}</ProjectStack>
+
+            <ProjectResponsibility>
+              <div style={{textDecoration: "underline"}}>Role and responsibilities : </div>
+
+              <div>
+                <li>
+                  <span>Pages - </span> {pro.page}
+                </li>
+              </div>
+              {pro.functionalities && (
+                <div>
+                  <li>
+                    <span>Functionalities - </span>
+                    {pro.functionalities}
+                  </li>
+                </div>
+              )}
+            </ProjectResponsibility>
+
             <GitDemo>
               <a rel="noreferrer" target="_blank" href={pro.demo}>
                 Demo
