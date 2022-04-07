@@ -2,8 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import twittersrc from "../Images/twitter.png";
 import travelixsrc from "../Images/travelix.png";
+import mmt from "../Images/mmt.png";
 
 const project = [
+  {
+    img: mmt,
+    title: "Make My Trip",
+    github: "https://github.com/surajhimanshu/Make-my-trip-clone",
+    demo: "https://make-my-trip-clone.vercel.app",
+    description: "Make my trip is an online travel company",
+    tech: "REACT  |  NODE  |   EXPRESS  |   MONGODB  |  MUI   ",
+    page: "Navbar, Flight Search,  Registration &  Login",
+    functionalities: " Flight Search, Booking Flight, Registration & Login ",
+  },
   {
     img: twittersrc,
     title: "Twitter",
@@ -22,7 +33,7 @@ const project = [
     description: "A website where we can book cheapest flight tickets ",
     tech: "HTML  |  CSS | JAVASCRIPT",
     page: "Homepage & Blog pages",
-  },
+  }
 ];
 
 const ProjectWrapper = styled.div`
@@ -68,23 +79,33 @@ const ProjectHeader = styled.div`
 const ProjectContent = styled.div`
   display: flex;
   justiy-content: space-evenly;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  // justify-content:flex-start;
   gap: 10px;
   margin-top: 50px;
+  row-gap: 40px;
   @media only screen and (max-width: 900px) {
     flex-direction: column;
-    > div:first-child {
-      margin-bottom: 50px;
-    }
   }
 `;
 
 const ProjectCard = styled.div`
-  width: 45%;
+  width: 40%;
   margin: 0 auto;
+  // border:1px solid green;
+  min-width:450px;
+  @media only screen and (max-width: 1100px) {
+    min-width: 600px;
+  }
   @media only screen and (max-width: 800px) {
-    width: 85%;
+    min-width: 500px;
+  }
+  @media only screen and (max-width: 700px) {
+   min-width: 400px;
   }
   @media only screen and (max-width: 500px) {
+    min-width: 350px;
     margin-top: -20px;
   }
 `;
@@ -111,11 +132,12 @@ const ProjectTitle = styled.div`
   font-size: 35px;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  @media only screen and (max-width: 800px) {
-    font-size: 24px;
+  margin-left:-7%;
+  @media only screen and (max-width: 900px) {
+    margin-left:-10%;
   }
-  @media only screen and (max-width: 800px) {
-    font-size: 20px;
+  @media only screen and (max-width: 600px) {
+    font-size: 25px;
   }
 `;
 

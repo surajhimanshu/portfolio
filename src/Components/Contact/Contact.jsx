@@ -62,6 +62,7 @@ const TouchContent = styled.div`
   flex-wrap: wrap;
   @media only screen and (max-width: 800px) {
      flex-direction: column;
+     width: 95%;
   }
   
 `;
